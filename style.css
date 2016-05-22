@@ -1,0 +1,22 @@
+h1 {
+	text-align: center;
+}
+
+
+#result {
+	font-size: 120pt;
+}
+#result .report {
+	font-weight: bold;
+}
+#result #isValid {
+	color: blue;
+}
+#result #isNotValid {
+	color: red;
+}
+
+#about {
+	position: absolute;
+	bottom: 20px;
+} 

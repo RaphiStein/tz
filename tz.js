@@ -56,7 +56,7 @@ function il_id($id_num){
 		console.log("tz", tz);
 
 		if (il_id(tz).valid) {
-			document.getElementById('result').innerHTML = '' + 
+			document.getElementById('result').innerHTML = ''+ 
 			'<div class="xs-12">' + 
 			'<p>' + tz + ' is ' + '<span id="isValid" class="report">IS VALID</span></p></div>';
 		}

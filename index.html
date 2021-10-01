@@ -1,49 +1,54 @@
-	<html>
-	<head>
-		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+<html>
 
-		<link rel="stylesheet" href="style.css">
+<head>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
 
-		
-		<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-		<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="style.css">
 
-		
-		<script src="tz.js" type="text/javascript"></script>
 
-	</head>
-	<body>
-		<div class="container">
-			<div class="row">
-				<div class="col-xs-12">
-					<h1>Teudat Zehut Validator</h1>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-xs-3"></div>
-				<div class="col-xs-6">
-					<form onsubmit="return tz_submit()">
-						<div class="input-group">
-							<input id="tz" type="text" class="form-control" placeholder="Enter Teudat Zehut" />
-							<span class="input-group-btn">
-								<button class="btn btn-default" type="submit">Validate</button>
-							</span>
-						</div>
-					</form>
-				</div>
-				<div class="col-xs-3"></div>
+	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+	<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 
-			</div>
-			<div class="row" id="result">
-				
-			</div>
 
-			<div id="about">
-				<button type="button" class="btn btn-info" data-toggle="collapse" data-target="#aboutText">About</button>
-				<div id="aboutText" class="collapse">
-					<p>Enter a Teudat Zehut into the validator to check if it is a potentially valid Teudat Zehut. If it is valid, this does not neccesarily mean that it is a number currently in use - only that it can potentially be used as a Teudat Zehut because it follows the appropriate patterns and rules. </p>
-				</div>
+	<script src="tz.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12">
+				<h1>Teudat Zehut Validator</h1>
 			</div>
 		</div>
-	</body>
-	</html>
+		<div class="row">
+			<div class="col-xs-3"></div>
+			<div class="col-xs-6">
+				<form onsubmit="return tz_submit()">
+					<div class="input-group">
+						<input id="tz" type="text" class="form-control" placeholder="Enter Teudat Zehut" />
+						<span class="input-group-btn">
+							<button class="btn btn-default" type="submit">Validate</button>
+						</span>
+					</div>
+				</form>
+			</div>
+			<div class="col-xs-3"></div>
+
+		</div>
+		<div class="row" id="result">
+
+		</div>
+
+		<div id="about">
+			<button type="button" class="btn btn-info" data-toggle="collapse" data-target="#aboutText">About</button>
+			<div id="aboutText" class="collapse">
+				<p>Enter a Teudat Zehut into the validator to check if it is a potentially valid Teudat Zehut. If it is
+					valid, this does not neccesarily mean that it is a number currently in use - only that it can
+					potentially be used as a Teudat Zehut because it follows the appropriate patterns and rules. </p>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

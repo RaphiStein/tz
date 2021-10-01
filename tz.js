@@ -72,3 +72,48 @@ function tz_submit() {
   // prevent page redirection
   return false;
 }
+
+function suggestTzs(digits) {
+  if (!digits) return [];
+  if (digits.length === 9) return [digits];
+
+  const toAdd = 9 - digits.length;
+  const ret = [];
+  const ztn = "0123456789".split("");
+  // Repeating digits, before and after
+  ret.push(...ztn.map((x) => digits + x.repeat(toAdd)));
+  ret.push(...ztn.map((x) => x.repeat(toAdd) + digits));
+  // Zeroes with digits on the outside, before and after
+  ret.push(...ztn.map((x) => digits + "0".repeat(toAdd - 1) + x));
+  ret.push(...ztn.map((x) => x + "0".repeat(toAdd - 1) + digits));
+  // Return distinct
+  return Array.from(new Set(ret));
+}
+
+function shuffle(arr) {
+  return arr
+    .map((value) => ({ value, sort: Math.random() }))
+    .sort((a, b) => a.sort - b.sort)
+    .map(({ value }) => value);
+}
+
+(function () {
+  const val = suggestTzs($("#tz").val());
+
+  const valFiltered = val.filter((x) => il_id(x).valid);
+
+  $("#tz").on("input", function (c) {
+    const suggestions = shuffle(
+      suggestTzs($(this).val()).filter((x) => il_id(x).valid)
+    ).slice(0, 5);
+    $("#suggestions > div").text("");
+
+    suggestions.forEach((sugg) => {
+      $("#suggestions > div").append(`
+		<div class="suggestion">
+		${sugg} 
+		</div>
+	  `);
+    });
+  });
+})();

@@ -57,16 +57,16 @@ function tz_submit() {
       '<div class="xs-12">' +
       "<p>" +
       tz +
-      " is " +
-      '<span id="isValid" class="report">IS VALID</span></p></div>';
+      " " +
+      '<br><span id="isValid" class="report">IS VALID</span></p></div>';
   } else {
     document.getElementById("result").innerHTML =
       "" +
       '<div class="xs-12">' +
       "<p>" +
       tz +
-      " is " +
-      '<span id="isNotValid" class="report">IS NOT VALID</span></p></div>';
+      " " +
+      '<br><span id="isNotValid" class="report">IS NOT VALID</span></p></div>';
   }
 
   // prevent page redirection

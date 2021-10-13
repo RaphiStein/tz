@@ -1,4 +1,5 @@
 # tz
 Teudat Zehut number (Israeli Identification) validations
 
-GH-PAGES
+https://raphistein.github.io/tz/
+
